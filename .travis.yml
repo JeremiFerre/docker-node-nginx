@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 script:
-  - docker build -t yermangderrff/node-nginx .
+  - docker build -t yermangderrff/node-nginx:0.2 .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push yermangderrff/node-nginx
+  - docker push yermangderrff/node-nginx:0.2
   
